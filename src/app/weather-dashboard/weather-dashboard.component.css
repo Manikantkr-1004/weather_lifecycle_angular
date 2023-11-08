@@ -1,0 +1,160 @@
+.normal{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content : space-evenly;
+    gap: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830026.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+}
+.Clear{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content : space-evenly;
+    gap: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+    background-image: url('https://img.freepik.com/premium-vector/clouds-stars-sun-blue-background-childrens-vector-illustration-sky_153074-219.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+}
+.Rain{
+    background-image: url('https://img.freepik.com/free-vector/dark-clouds-with-rainfall-thunder-flash-background_1017-32181.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content : space-evenly;
+    gap: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+.Clouds{
+    background-image: url('https://t4.ftcdn.net/jpg/05/13/26/73/360_F_513267391_QEmNGeOFLLqrILTnoq21dReUPp5UsoNr.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content : space-evenly;
+    gap: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+.Snow{
+    background-image: url('https://i.ytimg.com/vi/KgnnY_g8I5k/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGBMgSyh_MA8=&rs=AOn4CLAEfx9HmZ155-QCFTQLX4qz63h1-Q');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: auto;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content : space-evenly;
+    gap: 20px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+
+.adding{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+.adding input{
+    width: 80%;
+    margin: auto;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+.adding button{
+    width: 80%;
+    margin: auto;
+    padding: 10px 0px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+.adding button:hover{
+    background: #000;
+    color: white;
+    border: none;
+}
+
+.weather{
+    width: 400px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.weather>img{
+    animation: blink 2s infinite;
+    filter: drop-shadow(0 0 0.75rem #363636);
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.weather>h1{
+    text-align: center;
+}
+.weather>h4{
+    text-align: left;
+    padding-left: 25px;
+}
+.weather span{
+    color: brown;
+}
+
+@media all and (max-width: 830px){
+    .Clouds,.Clear,.Rain,.Snow.normal{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .adding,.weather{
+        width: 95%;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    .adding{
+        margin-top: 280px;
+    }
+    .adding input,.adding button{
+        width: 100%;
+    }
+}
+@media all and (max-width: 380px) {
+    .weather>h1{
+        font-size: 25px;
+    }
+}

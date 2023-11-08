@@ -1,0 +1,19 @@
+<div class="normal" [ngClass]="{'Clear': data?.weather[0]?.main==='Clear', 'Snow': data?.weather[0]?.main==='Snow', 'Clouds': data?.weather[0]?.main==='Clouds', 'Rain': data?.weather[0]?.main==='Rain'}">
+    <div class="adding">
+        <input (input)="setLocation($event)" type="search" placeholder="Enter City Name" /><br><br>
+        <button  (click)="onClick()">See Weather</button>
+    </div>
+    <div class="weather">
+        <img [src]="'https://openweathermap.org/img/wn/' + (data?.weather[0]?.icon) + '@4x.png'" alt="location" />
+        <p>{{data?.name}} - {{data?.weather[0]?.description}}</p>
+        <h1>{{getTemp()}}</h1>
+        <h4>Latitude:- <span>{{data?.coord?.lat}}</span></h4>
+        <h4>Longitude:- <span>{{data?.coord?.lon}}</span></h4>
+        <h4>Air Pressure:- <span>{{data?.main?.pressure}} hPa</span></h4>
+        <h4>Visibility:- <span>{{(data?.visibility/1609).toString().substring(0,1)}} mi</span></h4>
+        <h4>Humidity:- <span>{{data?.main?.humidity}}%</span></h4>
+        <h4>Wind Speed:- <span>{{data?.wind?.speed}} m/s</span></h4>
+        <h4>Sunrise:- <span>{{checkSunrise(+data?.sys?.sunrise,+data?.timezone)}}</span></h4>
+        <h4>Sunset:- <span>{{checkSunset(+data?.sys?.sunset,+data?.timezone)}}</span></h4>
+    </div>
+</div>
